@@ -247,7 +247,9 @@ export async function addInventoryItem(
       unit: product.unit,
       source: item.source,
       status: product.status,
-      price: parseFloat(product.costPrice),
+      costPrice: product.costPrice ? parseFloat(product.costPrice) : undefined,
+      salePrice: parseFloat(product.salePrice),
+      price: parseFloat(product.salePrice),
       discount: parseFloat(product.discount),
       stock: inventory.quantity,
       minStock: inventory.reorderLevel,
@@ -622,7 +624,7 @@ export async function deleteInvoice(id: string): Promise<boolean> {
 export async function getSuppliers(): Promise<Supplier[]> {
   try {
     const sources = await fetchAPI("/sources/")
-    const suppliers = sources.map((s: any) => ({
+    const suppliers: Supplier[] = sources.map((s: any) => ({
       id: s.sourceId.toString(),
       name: s.name,
       contactPerson: s.contactPerson,
@@ -730,7 +732,7 @@ export async function getPurchaseOrders(): Promise<PurchaseOrder[]> {
     const suppliersRes = await fetchAPI("/sources/")
     const suppliers = new Map<any, any>(suppliersRes.map((s: any) => [s.sourceId, s]))
 
-    const orders = newStocks.map((stock: any) => {
+    const orders: PurchaseOrder[] = newStocks.map((stock: any) => {
         // We need to fetch inventory to get product ID?
         // NewStock has 'inventory' field which is inventoryId.
         // We don't have inventory map here.
