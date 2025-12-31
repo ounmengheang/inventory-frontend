@@ -456,8 +456,9 @@ export async function getInvoices(): Promise<any[]> {
         id: invoice.invoiceId.toString(),
         invoiceId: invoice.invoiceId,
         invoiceNumber: `INV-${invoice.invoiceId}`, // Generate or use ID
-        customerName: "Loading...", // Need to fetch customer details? Invoice has customer ID.
-        customerEmail: "",
+        customerName: invoice.customerName || "Guest", // Use customerName from invoice
+        customerEmail: invoice.customerEmail || "",
+        customerPhone: invoice.customerPhone || "",
         customerAddress: "",
         status: invoice.status.toLowerCase(),
         paymentMethod: invoice.paymentMethod || "Cash",
