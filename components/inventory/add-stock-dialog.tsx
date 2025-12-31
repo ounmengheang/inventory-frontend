@@ -120,7 +120,7 @@ export function AddStockDialog({ item, onSuccess }: AddStockDialogProps) {
           Add Stock
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-w-[95vw] sm:max-w-[425px] max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <form onSubmit={handleSubmit}>
           <DialogHeader>
             <DialogTitle>Add Stock</DialogTitle>

@@ -182,13 +182,13 @@ export function CustomersTable() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Customer Name</TableHead>
-              <TableHead>Type</TableHead>
-              <TableHead>Contact</TableHead>
-              <TableHead>Address</TableHead>
-              <TableHead>First Purchase</TableHead>
-              <TableHead>Added On</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[150px]">Customer Name</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Type</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[180px]">Contact</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[200px]">Address</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[120px]">First Purchase</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Added On</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

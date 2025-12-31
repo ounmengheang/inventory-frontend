@@ -90,13 +90,13 @@ export function InvoiceList({ invoices, onUpdate }: InvoiceListProps) {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Invoice #</TableHead>
-              <TableHead>Customer</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead className="text-right">Total</TableHead>
-              <TableHead>Payment</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[120px]">Invoice #</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[150px]">Customer</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Date</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Total</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Payment</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[90px]">Status</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[120px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

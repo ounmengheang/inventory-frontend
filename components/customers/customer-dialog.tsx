@@ -104,12 +104,12 @@ export function CustomerDialog({ customer, open, onOpenChange, onSuccess }: Cust
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-[95vw] sm:max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
-          <DialogTitle>{customer ? "Edit Customer" : "Add New Customer"}</DialogTitle>
+          <DialogTitle className="text-lg sm:text-xl">{customer ? "Edit Customer" : "Add New Customer"}</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="name">Customer Name *</Label>
               <Input
@@ -136,7 +136,7 @@ export function CustomerDialog({ customer, open, onOpenChange, onSuccess }: Cust
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
             <div className="space-y-2">
               <Label htmlFor="phone">Phone *</Label>
               <Input

@@ -85,12 +85,12 @@ export function SupplierTable({ suppliers, onUpdate }: SupplierTableProps) {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-base">Supplier Name</TableHead>
-              <TableHead className="text-base">Contact Person</TableHead>
-              <TableHead className="text-base">Contact Info</TableHead>
-              <TableHead className="text-base">Address</TableHead>
-              <TableHead className="text-base">Last Transaction</TableHead>
-              <TableHead className="text-right text-base">Actions</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[150px]">Supplier Name</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[150px]">Contact Person</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[180px]">Contact Info</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[200px]">Address</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[140px]">Last Transaction</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[120px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

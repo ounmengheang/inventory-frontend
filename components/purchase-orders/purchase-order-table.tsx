@@ -362,15 +362,15 @@ export function PurchaseOrderTable() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order ID</TableHead>
-              <TableHead>Created Date</TableHead>
-              <TableHead>Customer</TableHead>
-              <TableHead className="w-28">Payment</TableHead>
-              <TableHead className="text-right">Total</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Paid At</TableHead>
-              <TableHead>Created By</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Order ID</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[120px]">Created Date</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[150px]">Customer</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Payment</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Total</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Status</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[120px]">Paid At</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[120px]">Created By</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[150px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

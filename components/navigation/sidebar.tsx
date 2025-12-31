@@ -44,13 +44,22 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const pathname = usePathname()
 
   return (
-    <aside
-      className={cn(
-        "sticky top-0 h-screen bg-background border-r transition-all duration-300 ease-in-out flex-shrink-0",
-        isOpen ? "w-full sm:w-64" : "w-0 border-r-0",
+    <>
+      {/* Mobile overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 sm:hidden"
+          onClick={() => setIsOpen(false)}
+        />
       )}
-    >
-      <div className={cn("flex flex-col h-full w-full sm:w-64", !isOpen && "invisible")}>
+      
+      <aside
+        className={cn(
+          "fixed sm:sticky top-0 h-screen bg-background border-r transition-all duration-300 ease-in-out flex-shrink-0 z-50 sm:z-auto",
+          isOpen ? "w-64" : "w-0 border-r-0",
+        )}
+      >
+        <div className={cn("flex flex-col h-full w-64", !isOpen && "invisible")}>
         <div className="p-3 sm:p-6 border-b flex items-center justify-between gap-2">
           <Link
             href="/"
@@ -97,5 +106,6 @@ export function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </div>
       </div>
     </aside>
+    </>
   )
 }

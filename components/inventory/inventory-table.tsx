@@ -181,17 +181,17 @@ export function InventoryTable({ items, onUpdate }: InventoryTableProps) {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-base">Image</TableHead>
-              <TableHead className="text-base">SKU</TableHead>
-              <TableHead className="text-base">Name</TableHead>
-              <TableHead className="text-base">Category</TableHead>
-              {isManagerOrAdmin() && <TableHead className="text-right text-base">Cost Price</TableHead>}
-              <TableHead className="text-right text-base">Sale Price</TableHead>
-              <TableHead className="text-right text-base">Discount</TableHead>
-              <TableHead className="text-right text-base">Final Price</TableHead>
-              {isManagerOrAdmin() && <TableHead className="text-right text-base">Profit/Unit</TableHead>}
-              <TableHead className="text-right text-base">Stock</TableHead>
-              <TableHead className="text-right text-base">Actions</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[80px]">Image</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">SKU</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[150px]">Name</TableHead>
+              <TableHead className="text-xs sm:text-sm min-w-[100px]">Category</TableHead>
+              {isManagerOrAdmin() && <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Cost Price</TableHead>}
+              <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Sale Price</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[90px]">Discount</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Final Price</TableHead>
+              {isManagerOrAdmin() && <TableHead className="text-right text-xs sm:text-sm min-w-[100px]">Profit/Unit</TableHead>}
+              <TableHead className="text-right text-xs sm:text-sm min-w-[80px]">Stock</TableHead>
+              <TableHead className="text-right text-xs sm:text-sm min-w-[120px]">Actions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
