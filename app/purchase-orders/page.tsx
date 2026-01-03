@@ -57,7 +57,7 @@ export default function PurchaseOrdersPage() {
               <ShoppingCart className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
             </div>
             <div className="min-w-0">
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">Customer Orders</h1>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">Purchase Orders</h1>
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground hidden sm:block">
                 Create and manage customer purchase orders (invoices)
               </p>
